@@ -13,5 +13,5 @@ class Main extends React.Component {
 
 ReactDOM.render(
     <Main name="Adrimarn"/>,
-    document.getElementById('index')
+    document.getElementById('root')
 );
