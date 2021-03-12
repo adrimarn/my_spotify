@@ -4,11 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>React App</title>
+    <title>{{ config('app.name') }}</title>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 
 <body>
-<noscript>Your browser does not support JavaScript!</noscript>
+<noscript>You need to enable JavaScript to run this app.</noscript>
 <div id="app"></div>
 <script src="{{ asset('js/app.js') }}"></script>
 </body>
