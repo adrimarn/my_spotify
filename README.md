@@ -28,6 +28,12 @@ Install project dependencies
 composer install
 ```
 
+Database Migrations **(config the .env file before)**
+
+```shell
+php artisan db:create
+```
+
 Launch web application in localhost
 
 ```shell
