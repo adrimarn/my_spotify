@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Track extends Model
 {
     use HasFactory;
+
+    public function album()
+    {
+        return $this->hasOne(Album::class, 'id', 'album_id');
+    }
 }

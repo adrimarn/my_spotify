@@ -4,62 +4,28 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Track;
-use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Collection;
 
 class TrackController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return Track[]|\Illuminate\Database\Eloquent\Collection|\Illuminate\Http\Response
+     * @return Track|Collection
      */
     public function index()
     {
-        return Track::all();
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
+        return Track::with('album')->get();
     }
 
     /**
      * Display the specified resource.
      *
      * @param Track $track
-     * @return Track
+     * @return Track|Collection
      */
     public function show(Track $track)
     {
-        return $track;
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        return Track::with('album')->find($track);
     }
 }

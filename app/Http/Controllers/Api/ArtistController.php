@@ -4,62 +4,28 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Artist;
-use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Collection;
 
 class ArtistController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return Artist[]|\Illuminate\Database\Eloquent\Collection|\Illuminate\Http\Response
+     * @return Artist|Collection
      */
     public function index()
     {
-        return Artist::all();
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
+        return Artist::with('album')->get();
     }
 
     /**
      * Display the specified resource.
      *
      * @param Artist $artist
-     * @return Artist
+     * @return Artist|Collection
      */
     public function show(Artist $artist)
     {
-        return $artist;
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        return Artist::with('album')->find($artist);
     }
 }
