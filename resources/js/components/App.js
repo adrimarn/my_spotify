@@ -4,8 +4,6 @@ import Home from './Home';
 import Artists from './Artists';
 import Contact from './Contact';
 
-import Artist from './Artist';
-
 class App extends Component {
     render() {
         return (
