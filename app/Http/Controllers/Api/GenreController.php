@@ -32,12 +32,12 @@ class GenreController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param Genre $genre
+     * @return Genre
      */
-    public function show($id)
+    public function show(Genre $genre)
     {
-        //
+        return $genre;
     }
 
     /**

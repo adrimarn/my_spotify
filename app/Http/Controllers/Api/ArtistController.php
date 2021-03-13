@@ -32,12 +32,12 @@ class ArtistController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param Artist $artist
+     * @return Artist
      */
-    public function show($id)
+    public function show(Artist $artist)
     {
-        //
+        return $artist;
     }
 
     /**

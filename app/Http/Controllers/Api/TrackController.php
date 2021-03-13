@@ -32,12 +32,12 @@ class TrackController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param Track $track
+     * @return Track
      */
-    public function show($id)
+    public function show(Track $track)
     {
-        //
+        return $track;
     }
 
     /**

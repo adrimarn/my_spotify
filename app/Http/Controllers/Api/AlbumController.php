@@ -32,12 +32,12 @@ class AlbumController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param $id
-     * @return \Illuminate\Http\Response
+     * @param Album $album
+     * @return Album
      */
-    public function show($id)
+    public function show(Album $album)
     {
-        //
+        return $album;
     }
 
     /**
