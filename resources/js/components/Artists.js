@@ -19,7 +19,6 @@ class Artists extends Component {
     }
 
     getApi(pageNumber) {
-        console.log(`active page is ${pageNumber}`);
         fetch(`/api/artists?page=${pageNumber}`)
             .then((response) => {
                 return response.json()
@@ -56,9 +55,9 @@ class Artists extends Component {
                     <h1 className="text-center mb-5">Artists List</h1>
                     <div className="row row-cols-12 row-cols-md-3 g-4">
                         {this.state.artists.map((artist) => (
-                            <div className="col">
+                            <div  key={artist.id} className="col">
                                 <div className="card h-50">
-                                    <div key={artist.id} className="card">
+                                    <div className="card">
                                         <img src={artist.photo} className="card-img-top img-fluid"
                                              alt={`Photo de ${artist.name}`}/>
                                         <div className="card-body">
