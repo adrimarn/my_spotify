@@ -11,11 +11,11 @@ class TrackController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return Track|Collection
+     * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
      */
     public function index()
     {
-        return Track::with('album')->get();
+        return Track::with('album')->paginate(50);
     }
 
     /**

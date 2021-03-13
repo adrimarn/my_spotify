@@ -11,11 +11,11 @@ class GenreController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return Genre|Collection
+     * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
      */
     public function index()
     {
-        return Genre::with('album')->get();
+        return Genre::with('album')->paginate(50);
     }
 
     /**

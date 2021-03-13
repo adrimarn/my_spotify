@@ -11,11 +11,11 @@ class ArtistController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return Artist|Collection
+     * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
      */
     public function index()
     {
-        return Artist::with('album')->get();
+        return Artist::with('album')->paginate(50);
     }
 
     /**
