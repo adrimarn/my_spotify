@@ -9,14 +9,12 @@ class App extends Component {
         return (
             <Router>
                 <div>
-                    <h2 className="text-center">Bienvenue sur rushSpotify</h2>
                     <nav className="navbar navbar-expand-lg navbar-primary bg-light">
                         <ul className="navbar-nav mr-auto">
                             <li><Link to={'/'} className="nav-link"> Home </Link></li>
                             <li><Link to={'/artists'} className="nav-link">Artists</Link></li>
                         </ul>
                     </nav>
-                    <hr/>
                     <Switch>
                         <Route exact path='/' component={Home}/>
                         <Route exact path='/artists' component={Artists}/>

@@ -29,7 +29,7 @@ class Artist extends Component {
                 <img src={this.state.artist.photo} className="img-fluid d-flex rounded mx-auto d-block"/>
                 <h2>Biographie</h2>
                 <p> {this.state.artist.bio}</p>
-                <h3>album</h3>
+                <h3>Album</h3>
                 {this.state.album.map((album) => (
                     <img src={album.cover_small} className="img-fluid"
                          alt={`Photo de ${album.name}`}/>
