@@ -7,7 +7,8 @@ import Albums from './Albums';
 import Album from './Album';
 import Genres from './Genres';
 import Genre from './Genre';
-import Search from './Search';
+import SearchAll from './search/SearchAll';
+import SearchArtists from './search/SearchArtists';
 
 class App extends Component {
     render() {
@@ -32,7 +33,8 @@ class App extends Component {
                         <Route exact path='/albums/:id' component={Album}/>
                         <Route exact path='/genres' component={Genres}/>
                         <Route exact path='/genres/:id' component={Genre}/>
-                        <Route exact path='/search' component={Genre}/>
+                        <Route exact path='/search/:name' component={SearchAll}/>
+                        <Route exact path='/search/artists/:name' component={SearchArtists}/>
                     </Switch>
                 </div>
             </Router>
