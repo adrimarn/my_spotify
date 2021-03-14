@@ -5,7 +5,12 @@ class Search extends Component {
 
     handleChange = (e) => {
         this.setState({value: e.target.value});
-        this.componentDidMount()
+        clearTimeout(this.typingTimer);
+        this.typingTimer = setTimeout(() => {
+            if (e.target.value) {
+                this.componentDidMount()
+            }
+        }, 60);
     };
 
     state = {

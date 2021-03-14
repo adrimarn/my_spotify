@@ -3315,7 +3315,12 @@ var Search = /*#__PURE__*/function (_Component) {
         value: e.target.value
       });
 
-      _this.componentDidMount();
+      clearTimeout(_this.typingTimer);
+      _this.typingTimer = setTimeout(function () {
+        if (e.target.value) {
+          _this.componentDidMount();
+        }
+      }, 60);
     });
 
     _defineProperty(_assertThisInitialized(_this), "state", {
