@@ -50,8 +50,9 @@ class Search extends Component {
                         ))}
                     </div>
                     <div className="col-6">
-                        <h1>Liste des albums</h1> <Link
-                        to={`/search/albums/${this.state.value}`}><span>Voir tout</span></Link>
+                        <h1 className="float-left">Liste des albums</h1>
+                        <Link
+                            to={`/search/albums/${this.state.value}`}><span>Voir tout</span></Link>
                         {this.state.albums.map((album) => (
                             <p key={album.id}>{album.name}</p>
                         ))}
