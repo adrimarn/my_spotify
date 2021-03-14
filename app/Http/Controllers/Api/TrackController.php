@@ -21,11 +21,11 @@ class TrackController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param $id
+     * @param Track $track
      * @return Track|Collection
      */
-    public function show($id)
+    public function show(Track $track)
     {
-        return Track::with('album')->find($id);
+        return Track::with('album')->find($track->id);
     }
 }

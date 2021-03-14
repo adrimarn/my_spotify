@@ -21,11 +21,11 @@ class ArtistController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param $id
+     * @param Artist $artist
      * @return Artist|Collection
      */
-    public function show($id)
+    public function show(Artist $artist)
     {
-        return Artist::with('album')->find($id);
+        return Artist::with('album')->find($artist->id);
     }
 }

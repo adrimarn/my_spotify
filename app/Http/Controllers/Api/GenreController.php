@@ -21,11 +21,11 @@ class GenreController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param $id
+     * @param Genre $genre
      * @return Genre|Collection
      */
-    public function show($id)
+    public function show(Genre $genre)
     {
-        return Genre::with('album')->find($id);
+        return Genre::with('album')->find($genre->id);
     }
 }
