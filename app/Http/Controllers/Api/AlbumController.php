@@ -28,4 +28,9 @@ class AlbumController extends Controller
     {
         return Album::with('artist', 'genre', 'track')->find($album->id);
     }
+
+    public function random()
+    {
+        return Album::all()->random(15);
+    }
 }

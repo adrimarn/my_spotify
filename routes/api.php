@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('albums/random', [AlbumController::class, 'random']);
 Route::apiResource('artists', ArtistController::class)
     ->only(['index', 'show']);
 Route::apiResource('albums', AlbumController::class)
