@@ -2339,7 +2339,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Album__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Album */ "./resources/js/components/Album.js");
 /* harmony import */ var _Genres__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Genres */ "./resources/js/components/Genres.js");
 /* harmony import */ var _Genre__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Genre */ "./resources/js/components/Genre.js");
-/* harmony import */ var _search_SearchAll__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./search/SearchAll */ "./resources/js/components/search/SearchAll.js");
+/* harmony import */ var _Search__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Search */ "./resources/js/components/Search.js");
 /* harmony import */ var _search_SearchArtists__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./search/SearchArtists */ "./resources/js/components/search/SearchArtists.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -2461,8 +2461,8 @@ var App = /*#__PURE__*/function (_Component) {
               component: _Genre__WEBPACK_IMPORTED_MODULE_7__.default
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_12__.Route, {
               exact: true,
-              path: "/search/:name",
-              component: _search_SearchAll__WEBPACK_IMPORTED_MODULE_8__.default
+              path: "/search",
+              component: _Search__WEBPACK_IMPORTED_MODULE_8__.default
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_12__.Route, {
               exact: true,
               path: "/search/artists/:name",
@@ -3214,10 +3214,10 @@ var Home = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/search/SearchAll.js":
-/*!*****************************************************!*\
-  !*** ./resources/js/components/search/SearchAll.js ***!
-  \*****************************************************/
+/***/ "./resources/js/components/Search.js":
+/*!*******************************************!*\
+  !*** ./resources/js/components/Search.js ***!
+  \*******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3265,15 +3265,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var SearchAll = /*#__PURE__*/function (_Component) {
-  _inherits(SearchAll, _Component);
+var Search = /*#__PURE__*/function (_Component) {
+  _inherits(Search, _Component);
 
-  var _super = _createSuper(SearchAll);
+  var _super = _createSuper(Search);
 
-  function SearchAll() {
+  function Search() {
     var _this;
 
-    _classCallCheck(this, SearchAll);
+    _classCallCheck(this, Search);
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
@@ -3281,16 +3281,25 @@ var SearchAll = /*#__PURE__*/function (_Component) {
 
     _this = _super.call.apply(_super, [this].concat(args));
 
+    _defineProperty(_assertThisInitialized(_this), "handleChange", function (e) {
+      _this.setState({
+        value: e.target.value
+      });
+
+      _this.componentDidMount();
+    });
+
     _defineProperty(_assertThisInitialized(_this), "state", {
       artists: [],
       albums: [],
-      genres: []
+      genres: [],
+      value: ''
     });
 
     return _this;
   }
 
-  _createClass(SearchAll, [{
+  _createClass(Search, [{
     key: "componentDidMount",
     value: function () {
       var _componentDidMount = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
@@ -3301,7 +3310,7 @@ var SearchAll = /*#__PURE__*/function (_Component) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                search = this.props.match.params.name;
+                search = this.state.value;
                 fetch("/api/search/all/".concat(search)).then(function (response) {
                   return response.json();
                 }).then(function (result) {
@@ -3329,16 +3338,22 @@ var SearchAll = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
         className: "container",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+          className: "form-control me-2",
+          type: "text",
+          value: this.state.value,
+          placeholder: "Rechercher",
+          onChange: this.handleChange
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
           className: "row",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
             className: "col-6",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
               children: "Liste des artistes"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
-              to: "/search/artists/".concat(this.props.match.params.name),
+              to: "/search/artists/".concat(this.state.value),
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
                 children: "Voir tout"
               })
@@ -3352,7 +3367,7 @@ var SearchAll = /*#__PURE__*/function (_Component) {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
               children: "Liste des albums"
             }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
-              to: "/search/albums/".concat(this.props.match.params.name),
+              to: "/search/albums/".concat(this.state.value),
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
                 children: "Voir tout"
               })
@@ -3366,7 +3381,7 @@ var SearchAll = /*#__PURE__*/function (_Component) {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
               children: "Liste des genres"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
-              to: "/search/genres/".concat(this.props.match.params.name),
+              to: "/search/genres/".concat(this.state.value),
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
                 children: "Voir tout"
               })
@@ -3376,15 +3391,15 @@ var SearchAll = /*#__PURE__*/function (_Component) {
               }, genre.id);
             })]
           })]
-        })
+        })]
       });
     }
   }]);
 
-  return SearchAll;
+  return Search;
 }(react__WEBPACK_IMPORTED_MODULE_1__.Component);
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SearchAll);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Search);
 
 /***/ }),
 

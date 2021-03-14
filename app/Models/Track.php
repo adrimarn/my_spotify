@@ -16,6 +16,6 @@ class Track extends Model
     }
     public function getDurationFormatAttribute()
     {
-        return date('m:s', $this->duration);
+        return date('i:s', $this->duration);
     }
 }
