@@ -8,9 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Track extends Model
 {
     use HasFactory;
+    protected $appends = ['duration_format'];
 
     public function album()
     {
         return $this->hasOne(Album::class, 'id', 'album_id');
+    }
+    public function getDurationFormatAttribute()
+    {
+        return date('m:s', $this->duration);
     }
 }

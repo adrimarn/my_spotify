@@ -27,7 +27,7 @@ class Album extends Component {
 
         return (
             <div className="container">
-                <h1 className="text-center">{this.state.album.name}</h1>
+                <h1 className="text-center">{this.state.album.name} ({this.state.album.release_year})</h1>
                 <img src={this.state.album.cover} className="img-fluid d-flex rounded mx-auto d-block" />
                 <h2>Description</h2>
                 <p> {this.state.album.description}</p>
@@ -45,7 +45,7 @@ class Album extends Component {
                         <tr key={track.id}>
                             <th scope="row">{track.track_no}</th>
                             <td>{track.name}</td>
-                            <td>{track.duration}</td>
+                            <td>{track.duration_format}</td>
                         </tr>
                         ))}
                     </tbody>

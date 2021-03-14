@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Album extends Model
 {
     use HasFactory;
+    protected $appends = ['release_year'];
 
     public function artist()
     {
@@ -22,5 +23,8 @@ class Album extends Model
     public function track()
     {
         return $this->hasMany(Track::class, 'album_id', 'id');
+    }
+    public function getReleaseYearAttribute(){
+        return date('Y', $this->release_date);
     }
 }

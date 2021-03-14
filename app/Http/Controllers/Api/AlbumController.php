@@ -31,6 +31,6 @@ class AlbumController extends Controller
 
     public function random()
     {
-        return Album::all()->random(15);
+        return Album::all()->random(18);
     }
 }
