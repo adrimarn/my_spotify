@@ -10,7 +10,7 @@ class Search extends Component {
             if (e.target.value) {
                 this.componentDidMount()
             }
-        }, 60);
+        }, 300);
     };
 
     state = {
@@ -49,24 +49,44 @@ class Search extends Component {
                 <div className="row">
                     <div className="col-6">
                         <h1>Liste des artistes</h1><Link
-                        to={`/search/artists/${this.state.value}`}><span>Voir tout</span></Link>
+                        to={`/search/artists/${this.state.value}`}><span className="h5">Voir tout</span></Link>
                         {this.state.artists.map((artist) => (
-                            <p key={artist.id}>{artist.name}</p>
+                            <div  key={artist.id}>
+                                <img src={artist.photo}
+                                     alt={`Cover de ${artist.name}`}/>
+                                <div>
+                                    <h5><Link
+                                        to={`/artists/${artist.id}`}>{artist.name}</Link>
+
+                                    </h5>
+                                </div>
+                            </div>
                         ))}
                     </div>
                     <div className="col-6">
                         <h1 className="float-left">Liste des albums</h1>
                         <Link
-                            to={`/search/albums/${this.state.value}`}><span>Voir tout</span></Link>
+                            to={`/search/albums/${this.state.value}`}><span className="h5">Voir tout</span></Link>
                         {this.state.albums.map((album) => (
-                            <p key={album.id}>{album.name}</p>
+                            <div  key={album.id}>
+                                <img src={album.cover_small}
+                                     alt={`Cover de ${album.name}`}/>
+                                <div>
+                                    <h5><Link
+                                        to={`/albums/${album.id}`}>{album.name}</Link>
+
+                                    </h5>
+                                </div>
+                            </div>
                         ))}
                     </div>
                     <div className="col-12">
                         <h1>Liste des genres</h1><Link
-                        to={`/search/genres/${this.state.value}`}><span>Voir tout</span></Link>
+                        to={`/search/genres/${this.state.value}`}><span className="h5">Voir tout</span></Link>
                         {this.state.genres.map((genre) => (
-                            <p key={genre.id}>{genre.name}</p>
+                            <h5 key={genre.id}><Link
+                                to={`/genres/${genre.id}`}>{genre.name}</Link>
+                            </h5>
                         ))}
                     </div>
                 </div>

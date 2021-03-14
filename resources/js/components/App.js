@@ -20,9 +20,9 @@ class App extends Component {
                 <div>
                     <nav className="navbar navbar-expand-lg navbar-primary bg-light">
                         <ul className="navbar-nav mr-auto">
-                            <li><Link to={'/'} className="nav-link"> Home </Link></li>
-                            <li><Link to={'/search'} className="nav-link">Search</Link></li>
-                            <li><Link to={'/artists'} className="nav-link">Artists</Link></li>
+                            <li><Link to={'/'} className="nav-link"> Accueil </Link></li>
+                            <li><Link to={'/search'} className="nav-link">Rechercher</Link></li>
+                            <li><Link to={'/artists'} className="nav-link">Artistes</Link></li>
                             <li><Link to={'/albums'} className="nav-link">Albums</Link></li>
                             <li><Link to={'/genres'} className="nav-link">Genres</Link></li>
                         </ul>
