@@ -36,8 +36,10 @@ class SearchAll extends Component {
                         ))}
                     </div>
                     <div className="col-6">
-                        <h1>Liste des albums</h1> <Link
-                        to={`/search/albums/${this.props.match.params.name}`}><span>Voir tout</span></Link>
+                        <h1 className="float-left">Liste des albums</h1> <div className="col-2">
+                        <Link
+                            to={`/search/albums/${this.props.match.params.name}`}><span>Voir tout</span></Link>
+                    </div>
                         {this.state.albums.map((album) => (
                             <p key={album.id}>{album.name}</p>
                         ))}

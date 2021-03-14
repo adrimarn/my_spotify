@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactAudioPlayer from 'react-audio-player';
 
 class Album extends Component {
     state = {
@@ -37,6 +38,7 @@ class Album extends Component {
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Nom</th>
+                            <th scope="col">Écouter</th>
                             <th scope="col">Durée</th>
                         </tr>
                     </thead>
@@ -45,6 +47,12 @@ class Album extends Component {
                         <tr key={track.id}>
                             <th scope="row">{track.track_no}</th>
                             <td>{track.name}</td>
+                            <td> <ReactAudioPlayer
+                                src={track.mp3}
+                                AutoPlay
+                                onCanPlay
+                                controls
+                            /></td>
                             <td>{track.duration_format}</td>
                         </tr>
                         ))}
