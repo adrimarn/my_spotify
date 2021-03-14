@@ -16,9 +16,9 @@ class Album extends Component {
             })
             .then((result) => {
                 this.setState({
-                    album: result[0],
-                    artist: result[0].artist,
-                    track: result[0].track
+                    album: result,
+                    artist: result.artist,
+                    track: result.track
                 })
             })
     }
@@ -46,7 +46,7 @@ class Album extends Component {
                             <th scope="row">{track.track_no}</th>
                             <td>{track.name}</td>
                             <td>{track.duration}</td>
-                        </tr> 
+                        </tr>
                         ))}
                     </tbody>
                 </table>

@@ -18,13 +18,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('artists', ArtistController::class)
+Route::apiResource('artists', ArtistController::class)
     ->only(['index', 'show']);
-Route::resource('albums', AlbumController::class)
+Route::apiResource('albums', AlbumController::class)
     ->only(['index', 'show']);
-Route::resource('tracks', TrackController::class)
+Route::apiResource('tracks', TrackController::class)
     ->only(['index', 'show']);
-Route::resource('genres', GenreController::class)
+Route::apiResource('genres', GenreController::class)
     ->only(['index', 'show']);
 
 

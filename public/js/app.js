@@ -2080,9 +2080,9 @@ var Album = /*#__PURE__*/function (_Component) {
                   return response.json();
                 }).then(function (result) {
                   _this2.setState({
-                    album: result[0],
-                    artist: result[0].artist,
-                    track: result[0].track
+                    album: result,
+                    artist: result.artist,
+                    track: result.track
                   });
                 });
 
@@ -2566,8 +2566,8 @@ var Artist = /*#__PURE__*/function (_Component) {
                   return response.json();
                 }).then(function (result) {
                   _this2.setState({
-                    artist: result[0],
-                    album: result[0].album
+                    artist: result,
+                    album: result.album
                   });
                 });
 
@@ -2874,8 +2874,8 @@ var Genre = /*#__PURE__*/function (_Component) {
                   return response.json();
                 }).then(function (result) {
                   _this2.setState({
-                    genre: result[0],
-                    album: result[0].album
+                    genre: result,
+                    album: result.album
                   });
                 });
 

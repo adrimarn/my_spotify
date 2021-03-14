@@ -16,8 +16,8 @@ class Genre extends Component {
             })
             .then((result) => {
                 this.setState({
-                    genre: result[0],
-                    album: result[0].album
+                    genre: result,
+                    album: result.album
                 })
             })
     }

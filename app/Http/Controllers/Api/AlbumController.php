@@ -21,11 +21,11 @@ class AlbumController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param Album $album
+     * @param $id
      * @return Album|Collection
      */
-    public function show(Album $album)
+    public function show($id)
     {
-        return Album::with('track', 'genre', 'artist')->find($album);
+        return Album::with('artist', 'genre', 'track')->find($id);
     }
 }

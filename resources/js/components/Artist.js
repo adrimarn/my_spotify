@@ -16,8 +16,8 @@ class Artist extends Component {
             })
             .then((result) => {
                 this.setState({
-                    artist: result[0],
-                    album: result[0].album
+                    artist: result,
+                    album: result.album
                 })
             })
     }
