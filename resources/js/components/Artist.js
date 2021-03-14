@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from "react-router-dom";
 
 class Artist extends Component {
     state = {
@@ -31,8 +32,10 @@ class Artist extends Component {
                 <p> {this.state.artist.bio}</p>
                 <h3>Album</h3>
                 {this.state.album.map((album) => (
-                    <img src={album.cover_small} className="img-fluid"
-                         alt={`Photo de ${album.name}`}/>
+                    <Link to={`/albums/${album.id}`}>
+                        <img src={album.cover_small} className="img-fluid"
+                             alt={`Photo de ${album.name}`}/></Link>
+
                 ))}
             </div>
         );

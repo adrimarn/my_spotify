@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from "react-router-dom";
 
 class Genre extends Component {
     state = {
@@ -28,11 +29,12 @@ class Genre extends Component {
                 <h1 className="text-center">{this.state.genre.name}</h1>
                 <h3>Albums</h3>
                 {this.state.album.map((album) => (
-                    <img key={album.id} src={album.cover_small} className="img-fluid"
-                    alt={`Cover de ${album.name}`}/>
+                    <Link to={`/albums/${album.id}`}>
+                        <img key={album.id} src={album.cover_small} className="img-fluid"
+                             alt={`Cover de ${album.name}`}/></Link>
                 ))}
-                    
-                
+
+
             </div>
         );
     }

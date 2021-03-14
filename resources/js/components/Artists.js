@@ -50,7 +50,7 @@ class Artists extends Component {
                         lastPageText="Fin"
                     />
                 </div>
-                <h1 className="text-center mb-5">Artists List</h1>
+                <h1 className="text-center mb-5">Liste des artistes</h1>
                 <div className="row row-cols-12 row-cols-md-3 g-4">
                     {this.state.artists.map((artist) => (
                         <div key={artist.id} className="col">
