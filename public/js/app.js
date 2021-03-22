@@ -1954,6 +1954,8 @@ module.exports = {
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+/* LOAD REACTJS */
+
 
 __webpack_require__(/*! ./main */ "./resources/js/main.jsx");
 
@@ -1990,10 +1992,10 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
-/***/ "./resources/js/components/Album.js":
-/*!******************************************!*\
-  !*** ./resources/js/components/Album.js ***!
-  \******************************************/
+/***/ "./resources/js/components/Album.jsx":
+/*!*******************************************!*\
+  !*** ./resources/js/components/Album.jsx ***!
+  \*******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2171,10 +2173,10 @@ var Album = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/Albums.js":
-/*!*******************************************!*\
-  !*** ./resources/js/components/Albums.js ***!
-  \*******************************************/
+/***/ "./resources/js/components/Albums.jsx":
+/*!********************************************!*\
+  !*** ./resources/js/components/Albums.jsx ***!
+  \********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2331,10 +2333,10 @@ var Albums = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/App.js":
-/*!****************************************!*\
-  !*** ./resources/js/components/App.js ***!
-  \****************************************/
+/***/ "./resources/js/components/App.jsx":
+/*!*****************************************!*\
+  !*** ./resources/js/components/App.jsx ***!
+  \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2345,17 +2347,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
-/* harmony import */ var _Home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Home */ "./resources/js/components/Home.js");
-/* harmony import */ var _Artists__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Artists */ "./resources/js/components/Artists.js");
-/* harmony import */ var _Artist__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Artist */ "./resources/js/components/Artist.js");
-/* harmony import */ var _Albums__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Albums */ "./resources/js/components/Albums.js");
-/* harmony import */ var _Album__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Album */ "./resources/js/components/Album.js");
-/* harmony import */ var _Genres__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Genres */ "./resources/js/components/Genres.js");
-/* harmony import */ var _Genre__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Genre */ "./resources/js/components/Genre.js");
-/* harmony import */ var _Search__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Search */ "./resources/js/components/Search.js");
-/* harmony import */ var _search_SearchArtists__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./search/SearchArtists */ "./resources/js/components/search/SearchArtists.js");
-/* harmony import */ var _search_SearchAlbums__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./search/SearchAlbums */ "./resources/js/components/search/SearchAlbums.js");
-/* harmony import */ var _search_SearchGenres__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./search/SearchGenres */ "./resources/js/components/search/SearchGenres.js");
+/* harmony import */ var _Home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Home */ "./resources/js/components/Home.jsx");
+/* harmony import */ var _Artists__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Artists */ "./resources/js/components/Artists.jsx");
+/* harmony import */ var _Artist__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Artist */ "./resources/js/components/Artist.jsx");
+/* harmony import */ var _Albums__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Albums */ "./resources/js/components/Albums.jsx");
+/* harmony import */ var _Album__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Album */ "./resources/js/components/Album.jsx");
+/* harmony import */ var _Genres__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Genres */ "./resources/js/components/Genres.jsx");
+/* harmony import */ var _Genre__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Genre */ "./resources/js/components/Genre.jsx");
+/* harmony import */ var _Search__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Search */ "./resources/js/components/Search.jsx");
+/* harmony import */ var _search_SearchArtists__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./search/SearchArtists */ "./resources/js/components/search/SearchArtists.jsx");
+/* harmony import */ var _search_SearchAlbums__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./search/SearchAlbums */ "./resources/js/components/search/SearchAlbums.jsx");
+/* harmony import */ var _search_SearchGenres__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./search/SearchGenres */ "./resources/js/components/search/SearchGenres.jsx");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -2478,6 +2480,10 @@ var App = /*#__PURE__*/function (_Component) {
               component: _Genre__WEBPACK_IMPORTED_MODULE_7__.default
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Route, {
               exact: true,
+              path: "/search/:name",
+              component: _Search__WEBPACK_IMPORTED_MODULE_8__.default
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Route, {
+              exact: true,
               path: "/search",
               component: _Search__WEBPACK_IMPORTED_MODULE_8__.default
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Route, {
@@ -2510,10 +2516,10 @@ var App = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/Artist.js":
-/*!*******************************************!*\
-  !*** ./resources/js/components/Artist.js ***!
-  \*******************************************/
+/***/ "./resources/js/components/Artist.jsx":
+/*!********************************************!*\
+  !*** ./resources/js/components/Artist.jsx ***!
+  \********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2658,10 +2664,10 @@ var Artist = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/Artists.js":
-/*!********************************************!*\
-  !*** ./resources/js/components/Artists.js ***!
-  \********************************************/
+/***/ "./resources/js/components/Artists.jsx":
+/*!*********************************************!*\
+  !*** ./resources/js/components/Artists.jsx ***!
+  \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2818,10 +2824,10 @@ var Artists = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/Genre.js":
-/*!******************************************!*\
-  !*** ./resources/js/components/Genre.js ***!
-  \******************************************/
+/***/ "./resources/js/components/Genre.jsx":
+/*!*******************************************!*\
+  !*** ./resources/js/components/Genre.jsx ***!
+  \*******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2959,10 +2965,10 @@ var Genre = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/Genres.js":
-/*!*******************************************!*\
-  !*** ./resources/js/components/Genres.js ***!
-  \*******************************************/
+/***/ "./resources/js/components/Genres.jsx":
+/*!********************************************!*\
+  !*** ./resources/js/components/Genres.jsx ***!
+  \********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3108,10 +3114,10 @@ var Genres = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/Home.js":
-/*!*****************************************!*\
-  !*** ./resources/js/components/Home.js ***!
-  \*****************************************/
+/***/ "./resources/js/components/Home.jsx":
+/*!******************************************!*\
+  !*** ./resources/js/components/Home.jsx ***!
+  \******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3243,10 +3249,10 @@ var Home = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/Search.js":
-/*!*******************************************!*\
-  !*** ./resources/js/components/Search.js ***!
-  \*******************************************/
+/***/ "./resources/js/components/Search.jsx":
+/*!********************************************!*\
+  !*** ./resources/js/components/Search.jsx ***!
+  \********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3315,6 +3321,8 @@ var Search = /*#__PURE__*/function (_Component) {
         value: e.target.value
       });
 
+      _this.props.history.push("/search/".concat(e.target.value));
+
       clearTimeout(_this.typingTimer);
       _this.typingTimer = setTimeout(function () {
         if (e.target.value) {
@@ -3327,7 +3335,7 @@ var Search = /*#__PURE__*/function (_Component) {
       artists: [],
       albums: [],
       genres: [],
-      value: ''
+      value: _this.props.match.params.name
     });
 
     return _this;
@@ -3344,7 +3352,7 @@ var Search = /*#__PURE__*/function (_Component) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                search = this.state.value;
+                search = this.props.match.params.name;
                 fetch("/api/search/all/".concat(search)).then(function (response) {
                   return response.json();
                 }).then(function (result) {
@@ -3464,10 +3472,10 @@ var Search = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/search/SearchAlbums.js":
-/*!********************************************************!*\
-  !*** ./resources/js/components/search/SearchAlbums.js ***!
-  \********************************************************/
+/***/ "./resources/js/components/search/SearchAlbums.jsx":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/search/SearchAlbums.jsx ***!
+  \*********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3625,10 +3633,10 @@ var SearchAlbums = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/search/SearchArtists.js":
-/*!*********************************************************!*\
-  !*** ./resources/js/components/search/SearchArtists.js ***!
-  \*********************************************************/
+/***/ "./resources/js/components/search/SearchArtists.jsx":
+/*!**********************************************************!*\
+  !*** ./resources/js/components/search/SearchArtists.jsx ***!
+  \**********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3786,10 +3794,10 @@ var SearchArtists = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/search/SearchGenres.js":
-/*!********************************************************!*\
-  !*** ./resources/js/components/search/SearchGenres.js ***!
-  \********************************************************/
+/***/ "./resources/js/components/search/SearchGenres.jsx":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/search/SearchGenres.jsx ***!
+  \*********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3950,7 +3958,7 @@ var SearchGenres = /*#__PURE__*/function (_Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var _components_App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/App */ "./resources/js/components/App.js");
+/* harmony import */ var _components_App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/App */ "./resources/js/components/App.jsx");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 

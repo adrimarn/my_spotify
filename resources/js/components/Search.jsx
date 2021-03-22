@@ -5,6 +5,7 @@ class Search extends Component {
 
     handleChange = (e) => {
         this.setState({value: e.target.value});
+        this.props.history.push(`/search/${e.target.value}`);
         clearTimeout(this.typingTimer);
         this.typingTimer = setTimeout(() => {
             if (e.target.value) {
@@ -17,11 +18,11 @@ class Search extends Component {
         artists: [],
         albums: [],
         genres: [],
-        value: ''
+        value: this.props.match.params.name
     }
 
     async componentDidMount() {
-        const search = this.state.value;
+        const search = this.props.match.params.name;
 
         fetch(`/api/search/all/${search}`)
             .then((response) => {

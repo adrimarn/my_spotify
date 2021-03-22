@@ -35,6 +35,7 @@ class App extends Component {
                         <Route exact path='/albums/:id' component={Album}/>
                         <Route exact path='/genres' component={Genres}/>
                         <Route exact path='/genres/:id' component={Genre}/>
+                        <Route exact path='/search/:name' component={Search}/>
                         <Route exact path='/search' component={Search}/>
                         <Route exact path='/search/artists/:name' component={SearchArtists}/>
                         <Route exact path='/search/genres/:name' component={SearchGenres}/>
