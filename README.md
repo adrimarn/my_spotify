@@ -7,7 +7,7 @@ Student project for [W@C by Epitech](https://www.webacademie.org/). Promo 2022 S
 Close this repos
 
 ```
-git clone git@github.com:EpitechIT2020/W-WEB-090-STG-1-1-spotify-adrien.marion.git rush_spotify
+git clone https://github.com/adrimarn/my_spotify rush_spotify
 ```
 
 Navigate in the folder
