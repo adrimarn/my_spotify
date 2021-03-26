@@ -7,7 +7,7 @@ Student project for [W@C by Epitech](https://www.webacademie.org/). Promo 2022 S
 Close this repos
 
 ```
-git clone https://github.com/adrimarn/my_spotify rush_spotify
+git clone git@github.com:adrimarn/my_spotify.git rush_spotify
 ```
 
 Navigate in the folder
